@@ -1,0 +1,5 @@
+group = 'reactivesw'
+
+// for java jar file base name
+archivesBaseName = 'shopping-cart-it'
+version = '0.0.1'

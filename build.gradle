@@ -1,0 +1,24 @@
+buildscript {
+    ext { springBootVersion = '1.4.1.RELEASE' }
+
+    repositories {
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        // for spring boot
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+
+    }
+}
+
+// init repository, java, wrapper
+apply from: 'application_build/init_build.gradle'
+
+// init application version settings
+apply from: 'application_build/version.gradle'
+
+// application build script
+apply from: 'application_build/application_build.gradle'
